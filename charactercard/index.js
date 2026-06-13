@@ -3,86 +3,47 @@ const character = {
     class: "Swamp Beast Diplomat",
     level: 5,
     health: 100,
-    image: "img.webp",
+    image: "img.webp"
+};
 
-    attacked() {
+// Cache elements once
+const elements = {
+    name: document.getElementById("name"),
+    class: document.getElementById("class"),
+    level: document.getElementById("level"),
+    health: document.getElementById("health"),
+    image: document.getElementById("character-image"),
+    deathBanner: document.getElementById("death-banner"),
+    attackBtn: document.getElementById("attack-btn"),
+    levelBtn: document.getElementById("levelup-btn")
+};
 
-    this.health -= 20;
+function updateCard() {
+    elements.name.textContent = character.name;
+    elements.class.textContent = character.class;
+    elements.level.textContent = character.level;
+    elements.health.textContent = character.health;
+    elements.image.src = character.image;
+}
 
-    if (this.health <= 0) {
+function attackCharacter() {
+    character.health = Math.max(0, character.health - 20);
 
-        this.health = 0;
-
-        // Show death banner
-        document
-            .getElementById("death-banner")
-            .classList.add("show");
-
-    } else {
-
-        message.textContent =
-            `${this.name} was attacked!`;
+    if (character.health === 0) {
+        elements.deathBanner.classList.add("show");
     }
 
     updateCard();
-    },
-
-      levelUp() {
-
-        this.level += 1;
-
-        updateCard();
-    }
-};
-
-const nameElement =
-    document.getElementById("name");
-
-const classElement =
-    document.getElementById("class");
-
-const levelElement =
-    document.getElementById("level");
-
-const healthElement =
-    document.getElementById("health");
-
-const imageElement =
-    document.getElementById("character-image");
-
-const message =
-    document.getElementById("message");
-
-function updateCard() {
-
-    nameElement.textContent =
-        character.name;
-
-    classElement.textContent =
-        character.class;
-
-    levelElement.textContent =
-        character.level;
-
-    healthElement.textContent =
-        character.health;
-
-    imageElement.src =
-        character.image;
 }
 
-document
-    .getElementById("attack-btn")
-    .addEventListener("click", () => {
+function levelUpCharacter() {
+    character.level++;
+    updateCard();
+}
 
-        character.attacked();
-    });
+// Event listeners
+elements.attackBtn.addEventListener("click", attackCharacter);
+elements.levelBtn.addEventListener("click", levelUpCharacter);
 
-document
-    .getElementById("levelup-btn")
-    .addEventListener("click", () => {
-
-        character.levelUp();
-    });
-
+// Initial render
 updateCard();
