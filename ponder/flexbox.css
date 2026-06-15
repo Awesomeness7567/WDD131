@@ -32,7 +32,7 @@ gap: 1em;
     justify-content: center;
 }
 
-.gallery >* {
+.gallery > * {
     flex: 1 1 460px;
 }
 
@@ -50,9 +50,9 @@ margin-top: 50px;
         flex-direction: row;
     }
 
-    .media-card-image {
+    /* .media-card-image {
         flex: 0 1 250px;
-    }
+    } */
 
     .media-card-content {
         flex: 0 1 60ch;
