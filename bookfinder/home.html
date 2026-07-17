@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="images/Booknest_logo_horizontal.png" alt="BookNest Logo">
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="reading_list.html">Reading List</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+    </header>
+
+    <main>
+
+    <section class="search">
+    <img src="images/left-leaf.png" alt="Left Decorative Leaf">
+
+    <div class="search-center">
+        <h1>Discover Your <br> Next Great Read</h1>
+
+        <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for a book, author, or genre...">
+        <button id="search-btn">
+            🔍
+        </button>
+        </div>
+    </div>
+    <img src="images/right-leaf.png" alt="Right Decorative Leaf">
+    </section>
+
+
+    <section class="genres-section">
+      <h2>Browse by Genre</h2>
+
+      <div class="genre-buttons">
+        
+        <button class="genre-btn" data-genre="fantasy"><span class="fantasy">🐉</span> Fantasy</button>
+        <button class="genre-btn" data-genre="mystery"><span class="mystery">🔍</span> Mystery</button>
+        <button class="genre-btn" data-genre="romance"><span class="romance">💖</span> Romance</button>
+        <button class="genre-btn" data-genre="science fiction"><span class="sci-fi">🪐</span> Sci-Fi</button>
+        <button class="genre-btn" data-genre="history"><span class="history">🏛️</span> History</button>
+      
+      </div>
+
+    </section>
+
+
+    <section class="recommendations-section">
+        <h3>Featured Recommendations</h3>
+    
+    <div id="book-grid" class="book-grid">
+        <p>Loading amazing books...</p>
+    </div>
+
+    </section>
+
+    </main>
+
+    <footer>
+        <hr>
+    
+        <nav class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

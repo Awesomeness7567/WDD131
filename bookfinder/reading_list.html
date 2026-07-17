@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading List - BookNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="reading_list.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/Booknest_logo_horizontal.png" alt="BookNest Logo">
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="reading_list.html" class="active">Reading List</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main class="container">
+        <!-- Central Page Header -->
+        <div class="page-header-centered">
+            <h1>My Reading List</h1>
+            <span class="decorative-heart">♥</span>
+        </div>
+
+        <!-- Saved Books Dynamic List -->
+        <section class="reading-list-container" id="reading-list-items">
+            <!-- Dynamic rows will inject here -->
+            <p class="empty-list-message">Your reading list is empty. Explore and add some books!</p>
+        </section>
+
+        <!-- Dynamic Summary Card -->
+        <section class="summary-card">
+            <div class="summary-content">
+                <div class="summary-icon">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <div class="summary-details">
+                    <h4 id="total-books-counter">Total Saved Books: 0</h4>
+                    <p>Keep reading, keep discovering!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <nav class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

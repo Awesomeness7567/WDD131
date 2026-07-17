@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="books.js" defer></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="images/Booknest_logo_horizontal.png" alt="BookNest Logo">
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="reading_list.html">Reading List</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+    </header>
+
+    <main class="container">
+        <!-- Back Link Navigation -->
+        <div class="back-nav">
+            <a href="home.html" id="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Recommendations</a>
+        </div>
+
+        <!-- Book Main Info Section -->
+        <section class="book-detail-grid">
+            <div class="book-cover-large">
+                <img id="detail-cover" src="images/no-cover.png" alt="Book Cover Placeholder">
+            </div>
+
+            <div class="book-metadata">
+                <h1 id="detail-title">Loading Book Title...</h1>
+                <h2 id="detail-author" class="author-subtext">by Author Name</h2>
+                
+                <div class="rating-container">
+                    <span class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </span>
+                    <span class="rating-text" id="detail-rating">4.5 (120 reviews)</span>
+                </div>
+
+                <div class="genre-tags" id="detail-genres">
+                    <!-- Dynamic tags like <span class="tag">Fantasy</span> will load here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Description and Actions -->
+        <section class="book-description-section">
+            <h3>Description</h3>
+            <p id="detail-description">
+                Loading description...
+            </p>
+
+            <div class="action-buttons">
+                <button id="detail-save-btn" class="btn-primary">
+                    <i class="fa-regular fa-bookmark"></i> Save to Reading List
+                </button>
+                <button id="detail-similar-btn" class="btn-secondary">
+                    View Similar Books
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+    
+        <nav class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
